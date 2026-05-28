@@ -34,7 +34,7 @@ export const useAuth = () => {
           localStorage.setItem('refreshToken', data.refreshToken);
 
           // Fetch user profile with the new access token
-          const profileRes = await fetch('/api/user/profile', {
+         const profileRes = await fetch(process.env.REACT_APP_API_URL + '/api/user/profile', {
             headers: { Authorization: `Bearer ${inMemoryAccessToken}` },
           });
           if (profileRes.ok) {
