@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-const API = '/api/auth';
+const API = `${process.env.REACT_APP_API_URL}/api/auth`;
 
 // Store tokens in memory (access) and localStorage (refresh)
 // Access token in memory = not vulnerable to XSS
